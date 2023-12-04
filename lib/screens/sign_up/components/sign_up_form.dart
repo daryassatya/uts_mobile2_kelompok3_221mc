@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:uts_mobile2_kelompok3_221mc/components/custom_suffix_icon.dart';
 import 'package:uts_mobile2_kelompok3_221mc/components/default_button.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/complete_profile/complete_profile_screen.dart';
-import 'package:uts_mobile2_kelompok3_221mc/screens/sign_up/sign_up_screen.dart';
 import 'package:uts_mobile2_kelompok3_221mc/size_config.dart';
 
 class SignUpForm extends StatefulWidget {
@@ -45,7 +44,7 @@ class _SignUpFormState extends State<SignUpForm> {
     return TextFormField(
       obscureText: true,
       onChanged: (newValue) => confirmPassword = newValue,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: "Konfirmasi password",
         hintText: "Konfirmasi password Anda",
         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -58,7 +57,7 @@ class _SignUpFormState extends State<SignUpForm> {
     return TextFormField(
       obscureText: true,
       onChanged: (newValue) => password = newValue,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: "Password",
         hintText: "Masukkan password Anda",
         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -71,7 +70,7 @@ class _SignUpFormState extends State<SignUpForm> {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue, // Nullable string assignment
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: "Email",
         hintText: "Masukkan email Anda",
         floatingLabelBehavior: FloatingLabelBehavior.always,

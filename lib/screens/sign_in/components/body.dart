@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uts_mobile2_kelompok3_221mc/constants.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/sign_in/components/sign_form.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/sign_in/components/social_card.dart';
@@ -29,12 +28,12 @@ class Body extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
+              const Text(
                 "Masukkan email dan password Anda \natau dengan akun sosial media",
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
-              SignForm(),
+              const SignForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
