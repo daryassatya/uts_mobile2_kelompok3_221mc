@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:uts_mobile2_kelompok3_221mc/components/custom_suffix_icon.dart';
 import 'package:uts_mobile2_kelompok3_221mc/components/default_button.dart';
-import 'package:uts_mobile2_kelompok3_221mc/components/form_error.dart';
-import 'package:uts_mobile2_kelompok3_221mc/screens/home/home_screen.dart';
+import 'package:uts_mobile2_kelompok3_221mc/screens/complete_profile/complete_profile_screen.dart';
+import 'package:uts_mobile2_kelompok3_221mc/screens/sign_up/sign_up_screen.dart';
 import 'package:uts_mobile2_kelompok3_221mc/size_config.dart';
 
-class SignForm extends StatefulWidget {
-  const SignForm({super.key});
+class SignUpForm extends StatefulWidget {
+  const SignUpForm({super.key});
 
   @override
-  State<SignForm> createState() => _SignFormState();
+  State<SignUpForm> createState() => _SignUpFormState();
 }
 
-class _SignFormState extends State<SignForm> {
+class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   String? email = ''; // Nullable string
   String password = '';
-  bool remember = false;
+  String confirmPassword = '';
   final List<String> errors = [];
 
   @override
@@ -26,35 +26,30 @@ class _SignFormState extends State<SignForm> {
       child: Column(
         children: [
           buildEmailFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(30)),
           buildPasswordFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          Row(
-            children: [
-              Checkbox(
-                value: remember,
-                onChanged: (value) {
-                  setState(() {
-                    remember = value ?? true;
-                  });
-                },
-              ),
-              Text("Ingat saya"),
-              Spacer(),
-              Text(
-                "Lupa password",
-                style: TextStyle(decoration: TextDecoration.underline),
-              ),
-            ],
-          ),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(30)),
+          buildConfPasswordFormField(),
+          SizedBox(height: getProportionateScreenHeight(40)),
           DefaultButton(
-            text: "Masuk",
-            press: () => Navigator.pushNamed(context, HomeScreen.routeName),
-          ),
+              text: "Selanjutnya",
+              press: () {
+                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              }),
         ],
+      ),
+    );
+  }
+
+  TextFormField buildConfPasswordFormField() {
+    return TextFormField(
+      obscureText: true,
+      onChanged: (newValue) => confirmPassword = newValue,
+      decoration: InputDecoration(
+        labelText: "Konfirmasi password",
+        hintText: "Konfirmasi password Anda",
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }

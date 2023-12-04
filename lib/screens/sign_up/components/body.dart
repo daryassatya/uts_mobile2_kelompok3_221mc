@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uts_mobile2_kelompok3_221mc/constants.dart';
-import 'package:uts_mobile2_kelompok3_221mc/screens/sign_in/components/sign_form.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/sign_in/components/social_card.dart';
-import 'package:uts_mobile2_kelompok3_221mc/screens/sign_up/sign_up_screen.dart';
+import 'package:uts_mobile2_kelompok3_221mc/screens/sign_up/components/sign_up_form.dart';
 import 'package:uts_mobile2_kelompok3_221mc/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -11,8 +9,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: SizedBox(
+    return SizedBox(
       width: double.infinity,
       child: Padding(
         padding:
@@ -20,21 +17,17 @@ class Body extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: SizeConfig.screenHeight * 0.04),
+              SizedBox(height: SizeConfig.screenHeight * 0.02),
               Text(
-                "Selamat Datang!",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: getProportionateScreenWidth(28),
-                  fontWeight: FontWeight.bold,
-                ),
+                "Daftarkan akun Anda",
+                style: headingStyle,
               ),
               Text(
-                "Masukkan email dan password Anda \natau dengan akun sosial media",
+                "Lengkapi data Anda \natau melanjutkan dengan akun sosial media Anda!",
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
-              SignForm(),
+              SignUpForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -53,30 +46,15 @@ class Body extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: getProportionateScreenHeight(20)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Belum mempunyai akun? ",
-                    style: TextStyle(fontSize: getProportionateScreenWidth(16)),
-                  ),
-                  GestureDetector(
-                    onTap: () =>
-                        Navigator.pushNamed(context, SignUpScreen.routeName),
-                    child: Text(
-                      "Daftar",
-                      style: TextStyle(
-                          fontSize: getProportionateScreenWidth(16),
-                          color: kPrimaryColor),
-                    ),
-                  ),
-                ],
+              SizedBox(height: getProportionateScreenHeight(40)),
+              Text(
+                "Dengan mendaftar, kamu telah menyetujui peraturan dan pengkondisian dari kami",
+                textAlign: TextAlign.center,
               )
             ],
           ),
         ),
       ),
-    ));
+    );
   }
 }

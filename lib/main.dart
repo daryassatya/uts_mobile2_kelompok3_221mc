@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/splash/splash_screen.dart';
 import 'package:uts_mobile2_kelompok3_221mc/theme.dart';
-import 'routs.dart';
+import 'routes.dart';
 
 // import '../components/splash_content.dart';
 
@@ -23,5 +23,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

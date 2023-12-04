@@ -18,7 +18,7 @@ class SplashContent extends StatelessWidget {
       children: [
         Spacer(),
         Text(
-          "STTB CUAN",
+          "KEDAI STTB",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
             color: kPrimaryColor,
