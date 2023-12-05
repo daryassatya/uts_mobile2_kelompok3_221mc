@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_mobile2_kelompok3_221mc/screens/profile/profile_screen.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/splash/splash_screen.dart';
 import 'package:uts_mobile2_kelompok3_221mc/theme.dart';
 import 'routes.dart';

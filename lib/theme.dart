@@ -17,11 +17,11 @@ ThemeData theme() {
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(28),
-    borderSide: BorderSide(color: kTextColor),
+    borderSide: const BorderSide(color: kTextColor),
     gapPadding: 10,
   );
   return InputDecorationTheme(
-    contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
     enabledBorder: outlineInputBorder,
     focusedBorder: outlineInputBorder,
     border: outlineInputBorder,
@@ -30,18 +30,18 @@ InputDecorationTheme inputDecorationTheme() {
 
 TextTheme textTheme() {
   return TextTheme(
-    bodyText1: TextStyle(color: kTextColor),
-    bodyText2: TextStyle(color: kTextColor),
+    bodyText1: const TextStyle(color: kTextColor),
+    bodyText2: const TextStyle(color: kTextColor),
     // Define other text styles here if needed
   );
 }
 
 AppBarTheme appBarTheme() {
-  return AppBarTheme(
+  return const AppBarTheme(
     color: Colors.white,
     elevation: 0,
     iconTheme: IconThemeData(color: Colors.black),
     // AppBar-specific text style
-    titleTextStyle: TextStyle(color: Color(0xFF8B8B8B), fontSize: 18),
+    titleTextStyle: TextStyle(color: Color(0xFF8B8B8B), fontSize: 18,),
   );
 }
