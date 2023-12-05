@@ -73,7 +73,15 @@ class _BodyState extends State<Body> {
                         Navigator.pushNamed(context, SignInScreen.routeName);
                       },
                     ),
-                    Spacer()
+                    Spacer(),
+                    const Text(
+                      '© DimasAryasatya_21552011325', // Ganti tahun sesuai dengan tahun sekarang
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors
+                            .grey, // Atur warna teks hak cipta sesuai kebutuhan
+                      ),
+                    ),
                   ],
                 ),
               ),

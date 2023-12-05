@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_mobile2_kelompok3_221mc/screens/about/about.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/profile/components/profile_menu.dart';
 import 'package:uts_mobile2_kelompok3_221mc/screens/profile/components/profile_pic.dart';
 
@@ -29,9 +30,12 @@ class Body extends StatelessWidget {
             press: () {},
           ),
           ProfileMenu(
-            text: "Bantuan",
+            text: "Tentang Kami",
             icon: "assets/icons/Question mark.svg",
-            press: () {},
+            press: () => Navigator.pushNamed(
+                  context,
+                  AboutScreen
+                      .routeName),
           ),
           ProfileMenu(
             text: "Keluar",
